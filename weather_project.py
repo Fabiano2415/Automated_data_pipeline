@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
 import requests
 from datetime import datetime
@@ -12,12 +6,7 @@ import sqlalchemy as db
 import pymysql
 import keys
 
-
-# ## Collect Weather Data
-
-# In[2]:
-
-
+#  Collect Weather Data
 # List of cities
 cities_list = ['Frankfurt', 'Paris', 'Madrid']
 
@@ -74,14 +63,7 @@ def get_weather_loop(cities):
 weather_cities = get_weather_loop(cities_list)
 #print(weather_cities)
 
-
-# In[3]:
-
-
 weather_cities
-
-
-# In[4]:
 
 
 schema="wbs_data_engineer_project_db"   # name of the database you want to use here
@@ -91,15 +73,4 @@ password="password_key " # your password!!!
 port=3306
 con = f'mysql+pymysql://{user}:{password}@{host}:{port}/{schema}'
 
-
-# In[5]:
-
-
 weather_cities.to_sql("weather_cities",con=con,if_exists='append',index=False)
-
-
-# In[ ]:
-
-
-
-
