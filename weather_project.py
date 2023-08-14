@@ -67,7 +67,7 @@ weather_cities
 
 
 schema="wbs_data_engineer_project_db"   # name of the database you want to use here
-host="wbs-project3-db.caddbxh0tp4u.eu-central-1.rds.amazonaws.com"      # to connect to your local server
+host="wbs-project3-db.####.eu-central-1.rds.amazonaws.com"      # to connect to your local server
 user="admin"
 password="password_key " # your password!!!
 port=3306
